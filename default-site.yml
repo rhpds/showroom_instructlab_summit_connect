@@ -1,6 +1,6 @@
 ---
 site:
-  title: Summit Connect - Advanced InstructLab Workshop
+  title: Advanced InstructLab Workshop
   start_page: modules::index.adoc
 
 content:
