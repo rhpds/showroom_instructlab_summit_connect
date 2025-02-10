@@ -210,7 +210,7 @@ With the InstructLab environment configured, you can now download a quantized (c
 
 [source,sh,role=execute,subs=attributes+]
 ----
-ilab model download --repository instructlab/granite-7b-lab-GGUF --filename=granite-7b-lab-Q4_K_M.gguf
+ilab model download --repository instructlab/granite-7b-lab-GGUF --filename=granite-7b-lab-Q4_K_M.gguf ----hf-token $HUGGINGFACE_RO_TOKEN
 ----
 
 The `ilab model download` command downloads a model from the HuggingFace instructlab organization that we will use for this workshop. The output should look like the following:
