@@ -196,14 +196,14 @@ First, let's download Granite:
 
 [source,console,role=execute,subs=attributes+]
 ----
-ilab model download --repository instructlab/granite-7b-lab-GGUF --filename=granite-7b-lab-Q4_K_M.gguf
+ilab model download --repository instructlab/granite-7b-lab-GGUF --filename=granite-7b-lab-Q4_K_M.gguf --hf-token $HUGGINGFACE_RO_TOKEN
 ----
 
 One more time, let's pull down Merlinite:
 
 [source,console,role=execute,subs=attributes+]
 ----
-ilab model download --repository instructlab/merlinite-7b-lab-GGUF --filename=merlinite-7b-lab-Q4_K_M.gguf
+ilab model download --repository instructlab/merlinite-7b-lab-GGUF --filename=merlinite-7b-lab-Q4_K_M.gguf --hf-token $HUGGINGFACE_RO_TOKEN
 ----
 
 The `ilab model download` commands download models from the HuggingFace Instructlab organization that we will use for this workshop. The output should look like the following:
@@ -574,13 +574,16 @@ NOTE: Training using the newly generated data is a time and resource intensive t
 Due to the time constraints of this lab, we will not actually be training the model! This would require a full-scale synthetic data generation process and a training run that could take many hours. You probably have smoewhere else you need to be, so we are going to show you the end results without making you wait.
 
 . We have provided a model that has already been through this process in your demo system. First, if you have any processes running in either terminal window, type kbd:[CTRL+C] to exit. In order to serve the newly trained model you can now run the following in the *upper* command window:
++
 
 [source,console,role=execute,subs=attributes+]
 ----
 ilab model serve --model-path /home/instruct/files/summit-connect-merlinite-lab-Q4.gguf
 ----
++
 
 It may take some seconds to start, but you should see the following which should look familiar to you:
++
 
 [source,console]
 ----
@@ -618,13 +621,16 @@ Click on the blue chatbot icon in the bottom right corner of the screen to open 
 image::parasol-chat.webp[width=350]
 
 . Let’s ask the chatbot the same question with the newly trained model and see if the response has improved.
++
 
 [source,console,role=execute,subs=attributes+]
 ----
 How much does it cost to repair a flux capacitor?
 ----
++
 
 You should see something similar to the following (keep in mind that your output may look different due to the nature of large language models):
++
 
 image::parasol-new-response.webp[width=350]
 
